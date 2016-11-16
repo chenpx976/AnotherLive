@@ -1,7 +1,5 @@
 # Anotherlive
 
-[![Build Status](https://travis-ci.org/solarhell/AnotherLive.svg?branch=master)](https://travis-ci.org/solarhell/AnotherLive)
-
 ### 安装说明
 
 项目依赖
@@ -142,11 +140,6 @@ server {
     }
 }
 ```
-
-### Todo
-
-- [ ] 视频录制界面完善
-- [ ] 分类完善
 
 ### LICENSE
 GPL V3
