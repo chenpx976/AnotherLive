@@ -28,11 +28,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('directory/all', 'Play\LiveController@all')->name('all');
     Route::get('directory', 'Play\LiveController@directory')->name('directory');
     Route::get('category/{uri}','Play\LiveController@category');
-    Route::get('u/{id}', 'Play\LiveController@getLive')->where('id', '[0-9]+');
-    Route::get('about', 'Play\LiveController@getAbout')->name('about');
-    Route::get('v','Play\VideoController@getVideoIndex')->name('video_index');
-    Route::get('v/directory/rc','Play\VideoController@getRecordVideoAll')->name('video_ac_all');
-    Route::get('video/ac{id}','Play\VideoController@getRecordVideoPlay')->where('id', '[0-9]+');
+    Route::get('/{id}', 'Play\LiveController@getLive')->where('id', '[0-9]+');
 });
 
 //前台认证路由
@@ -55,11 +51,6 @@ Route::group(['middleware' => ['web'], 'prefix' => 'account'], function () {
     Route::get('live','Play\LiveManageController@getIndex')->name('live_manage');
     Route::post('live/create','Play\LiveManageController@postCreate')->name('live_create');
     Route::post('live/stop', 'Play\LiveManageController@postStop')->name('live_stop');
-    //视频管理
-    Route::get('video','Play\VideoManageController@getIndex')->name('account_video');
-    Route::get('record/list','Play\VideoManageController@getRecordVideos')->name('record_all');
-    Route::get('record/info','Play\VideoManageController@getRecordVideoManage')->name('record_manage');
-    Route::post('record/modify','Play\VideoManageController@postRecordVideoModify')->name('record_modify');
 });
 
 //后台认证路由
@@ -75,11 +66,6 @@ Route::group(['middleware' => ['web'], 'prefix' => 'admin'], function () {
     Route::get('activity', 'AdminController@getActivity')->name('admin_act_info');
     Route::get('activity/info','AdminController@getActivityInfo')->name('admin_act_manage');
     Route::post('activity/info','AdminController@postStopActivity')->name('admin_act_stop');
-    //视频管理
-    Route::get('video','AdminController@getVideo')->name('admin_video_index');
-    Route::get('record/list','AdminController@getRecordVideos')->name('admin_record_list');
-    Route::get('record/info','AdminController@getRecordVideoManage')->name('admin_record_manage');
-    Route::post('record/modify','AdminController@postRecordVideoModify')->name('admin_record_modify');
     //用户管理
     Route::get('users/normal','AdminController@getNormalUsers')->name('admin_users_normal');
     Route::get('users/blocked','AdminController@getBlockedUsers')->name('admin_users_blocked');

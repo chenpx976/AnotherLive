@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="sub-header">
-            <h3>{{ $title or 'Niconiconi' }}</h3>
+            <h3>{{ $title or 'AnotherLive' }}</h3>
         </div>
         <div class="container-build row">
             <div class="col-xs-12 col-md-4 user-center-left">
@@ -23,12 +23,6 @@
                     <a href="{{ url(route('admin_act_info')) }}" class="list-group-item
                     @if(URL::current() == url(route('admin_act_info'))) active @endif">
                         <i class="fa fa-cog"></i> 直播活动管理
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-cog"></i> 直播分类管理
-                    </a>
-                    <a href="{{ url(route('admin_video_index')) }}" class="list-group-item">
-                        <i class="fa fa-cogs"></i> 视频管理
                     </a>
                 </div>
             </div>

@@ -24,9 +24,6 @@
                         <a class="btn btn-primary btn-sm">
                             FLASH（延迟低）
                         </a>
-                        <a href="{{ url('/u/'.$id.'?m=mse') }}" class="btn btn-secondary btn-sm">
-                            MSE（MAC不会煎鸡蛋了）
-                        </a>
                     </div>
                 </div>
                 <div class="card shadow-card" id="player-controller">

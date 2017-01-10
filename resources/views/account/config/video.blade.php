@@ -6,7 +6,7 @@
             <h4>视频上传</h4>
         </div>
         <div class="card-block background-image"
-             style="background-image: url('//s-img.niconico.in/large/a15b4afegw1f4i318r5hgj22bc0wnn6n.jpg')">
+             style="background-image: url('//ws2.sinaimg.cn/large/a15b4afegw1f4i318r5hgj22bc0wnn6n.jpg')">
             <h5 style="text-align: center;padding-bottom: .6em;color: white">点击上传你的精彩视频</h5>
             <div style="text-align: center">
                 <button type="button" class="btn btn-info">上传视频</button>
@@ -28,7 +28,7 @@
                         <a href="{{ url(route('record_manage').'?vid='.$play_info['id']) }}">
                             <div class="card shadow-card no-margin-bottom">
                                 <div class="video-card"
-                                     style="background-image: url('{{ $play_info['cover'] ? $play_info['cover'] : '//s-img.niconico.in/orj480/a15b4afegw1f174um1elhj20g4093abh.jpg' }}');"></div>
+                                     style="background-image: url('{{ $play_info['cover'] ? $play_info['cover'] : '//ws2.sinaimg.cn/orj480/a15b4afegw1f174um1elhj20g4093abh.jpg' }}');"></div>
                                 <div class="video-card-title">
                                     <p class="card-text" style="color:white">{{ $play_info['name'] }}</p>
                                 </div>

@@ -23,15 +23,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url(route('all')) }}"><i class="fa fa-genderless"></i> 全部直播</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url(route('directory')) }}"><i class="fa fa-genderless"></i> 分类</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url(route('video_index')) }}"><i class="fa fa-genderless"></i> 视频</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url(route('about')) }}"><i class="fa fa-genderless"></i> 关于</a>
-            </li>
         </ul>
         <ul class="nav navbar-nav pull-right">
             @if (Auth::guest())
